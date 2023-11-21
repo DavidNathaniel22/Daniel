@@ -1,0 +1,48 @@
+lst = []
+biglst = []
+count = 0
+
+num = int(input("Enter number of array: "))
+
+if num in range(5, 11):
+   for i in range(0, num):
+       num1 = int(input("Enter number: "))
+       lst.append(num1)
+       if num1 >= 11:
+           biglst.append(num1)
+           count += 1
+       else:
+           count += 0
+          
+print(lst)
+print(biglst)
+print(count)
+
+# Array 2:  Create a program that will determine if the string inputted by end -user is a palindrome or not.
+def rev(d):
+   return low == low[::-1]
+
+let = str(input("Enter a word: "))
+low = let.casefold()
+result = rev(low)
+
+if result:
+   print("palindrome")
+  
+else:
+   print("No")
+# Array 3: Detect an input value value given by the end-user, if the user press 1 it will continuously asked end-user
+# to input an integer value, if the user press 0 it display all the input values and its corresponding element number.
+
+num2 = int(input("Enter number [1] [0]: "))
+last = []
+
+while num2 == 1:
+   num3 = int(input("Enter number: "))
+   last.append(num3)
+   num2 = int(input("Enter number [1] [0]: "))
+  
+if num2 == 0:
+   print(last)
+else:
+   print(last)
