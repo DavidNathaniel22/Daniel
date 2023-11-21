@@ -1,0 +1,24 @@
+class car:
+   def __init__(self, vehicle):
+       self.vehicle = input(vehicle)
+  
+   def car(self):
+       self.Jeepney = [10.00]
+       self.Tricycle = [20.00]
+       self.Bus = [40.00]
+      
+       if self.vehicle == "Jeepney":
+           print(f"{self.Jeepney[0]:.2f}")
+       elif self.vehicle == "Tricycle":
+           print(f"{self.Tricycle[0]:.2f}")
+       elif self.vehicle == "Bus":
+           print(f"{self.Bus[0]:.2f}")
+      
+travel = car("Enter a vehicle: ")
+travel.car()
+
+
+Code exam midterms
+lstA = []  # This will be the list for stack A
+lstB = []  # This will be the list for Stack B
+lstC = []  # This will be the list for Stack C
