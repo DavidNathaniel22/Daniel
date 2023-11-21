@@ -1,0 +1,106 @@
+# This function lets you create a stack
+def create_stack():  # definition of creating a stack
+   stack = list()  # variable stack is initialized as an empty list
+   return stack  # This will return an empty stack to the caller
+
+
+# This function lets you create an empty stack
+def isempty(stack):  # definition of isempty and stack at its argument
+   return len(stack) == 0  # This will check if the length of the stack is equal to 0, meaning it will be true else it will be false
+
+
+def push(stack, hey):  # definition of push and its argument the hey. It is used to push an element into the stack
+   stack.append(hey)  # This will append the given element into the stack
+   return stack  # This will now return the updated stack after appending an element
+
+
+def pop(stack):
+   if isempty(stack):
+       return "stack is empty"
+   else:
+       return stack.pop()
+
+
+def show(stack, ):
+   print(f"Stack Name: {enter} \nThe stack elements are: ")
+   for i in stack:
+       print(i)
+
+
+def peek(stack):
+   return stack[-1]
+
+
+stack = None
+enter = None
+hey = None
+
+print("Welcome, Please enter the following operations")
+while True:
+   user = str(input("\n[C] - Create Stack \n[A] - "
+                    "Append element to Stack \n[D] - Remove element on Stack \n[P] - Peek the top Element of Stack"
+                    "\n[S] - Show the Stack Element \n[X] - Exit \n\nChoose a stack operation: ")).upper()
+
+   if user == "C":
+       while True:
+           enter = input("Enter name of stack: ")
+           if len(enter) > 0:
+               stack = create_stack()
+               print(f"\nYou have now created {enter} stack \nstack name: {enter}")
+               break  # Exit the loop if a valid name is provided
+           else:
+               print(f"Please enter a name for the stack")
+
+   elif user == "A":
+       if stack is None:
+           print("\nYou must create a stack first to use other features")
+           continue
+       while True:
+           hey = input("Enter an element: ")
+           if len(hey) > 0:
+               pushing = push(stack, hey)
+               print(f"\nPushed item: {hey}\n{enter} {stack}")
+               break
+           else:
+               print("You didn't Enter an element")
+
+   elif user == "D":
+       if stack is None:
+           print("\nYou must create a stack first to use other features")
+           continue
+       else:
+           popped = pop(stack)
+           if popped:
+               print("\nThe word popped is:", popped)
+               print(enter, stack)
+
+   elif user == "P":
+       if stack is None:
+           print("\nYou must create a stack first to use other features")
+           continue
+       if isempty(stack):
+           print("\nThe stack is empty. There are no elements to peek.")
+       else:
+           print(f"\nThe peek of the word:", peek(stack))
+
+   elif user == "S":
+       if stack is None:
+           print("\nYou must create a stack first to use other features")
+           continue
+       if isempty(stack):
+           print("\nThe stack is empty. There are no element to show")
+       else:
+           reversal_red = reversed(stack)
+           show(reversal_red)
+
+   elif user == "X":
+       if stack is None:
+           break
+       else:
+           break
+   else:
+       print("\nPlease enter only the following operations ")
+       continue
+
+# Programmer David Nathaniel U. Miranda
+# Oct 13 2023
